@@ -13,19 +13,18 @@ else if(addItem==null || addItem==""|| addPrice==null || addPrice=="" ){
     alert("You need to write values")
 } 
 else{
-    for (let i=0; i<shoppingListNames.length;i++){
-    console.log(`${shoppingListNames[i]} costs  £${shoppingListPrices[i].toFixed(2)}`)
-}
-let total = 0
-for (let i=0; i<shoppingListPrices.length;i++){
-    total +=shoppingListPrices[i];
-}
-console.log(`Your total is: £${total.toFixed(2)}`)
-}
-let confirmTheUser = confirm("Would you like to add again?")
+    let confirmTheUser = confirm("Would you like to add again?")
     if (confirmTheUser == true){
         askTheUser = true;
     } else {
         askTheUser = false;
     }
 }
+}
+for (let i=0; i<shoppingListNames.length;i++){
+    console.log(`${shoppingListNames[i]} costs  £${shoppingListPrices[i].toFixed(2)}`)}
+    let total = 0
+for (let i=0; i<shoppingListPrices.length;i++){
+    total +=shoppingListPrices[i];
+}
+console.log(`Your total is: £${total.toFixed(2)}`)
